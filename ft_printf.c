@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 10:54:24 by ychahbi           #+#    #+#             */
-/*   Updated: 2022/11/14 17:55:45 by ychahbi          ###   ########.fr       */
+/*   Updated: 2022/11/14 18:57:04 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,26 +52,4 @@ int ft_printf(const char *Get_Data, ...)
 	va_end(ptr);
  
 	return (P_return);
-}
-int main()
-{
-	char a;
-	ft_printf("\n%c",'c');
-	ft_printf("\n%d",544566);
-	ft_printf("\n%u",4565464656);
-	ft_printf("\n%s","hello");
-	ft_printf("\n%i",5654);
-	ft_printf("\n%p",&a);
-	ft_printf("\n%%");
-	ft_printf("\n%d",ft_printf("\n%u",4565464656));
-	printf("\n**************");
-	printf("\n%c",'c');
-	printf("\n%d",544566);
-	printf("\n%u",4565464656);
-	printf("\n%s","hello");
-	printf("\n%i",5654);
-	printf("\n%p",&a);
-	printf("\n%%");
-	printf("\n%d",printf("\n%u",4565464656));
-	
 }
