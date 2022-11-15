@@ -6,7 +6,7 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:51:18 by ychahbi           #+#    #+#             */
-/*   Updated: 2022/11/14 17:43:54 by ychahbi          ###   ########.fr       */
+/*   Updated: 2022/11/14 20:14:41 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,13 @@
 
 void	ft_printnbr(int n, int *p_return)
 {
-	unsigned int	mv;
-	unsigned int	tmp;
+	unsigned int mv;
+	int	tmp;
 
 	if (n < 0)
 	{
-		mv = -n;
 		ft_printchar('-', p_return);
-		p_return += 1;
+		mv = n * -1;
 	}
 	else
 		mv = n;
@@ -29,7 +28,6 @@ void	ft_printnbr(int n, int *p_return)
 	{
 		tmp = mv + 48;
 		ft_printchar(tmp, p_return);
-		p_return += 1;
 	}
 	else
 	{
