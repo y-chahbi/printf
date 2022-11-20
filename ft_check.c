@@ -6,11 +6,32 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 11:47:32 by ychahbi           #+#    #+#             */
-/*   Updated: 2022/11/20 09:10:42 by ychahbi          ###   ########.fr       */
+/*   Updated: 2022/11/20 11:46:28 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+char	*ft_strdup(const char *s1)
+{
+	char	*ptr;
+	int		dex;
+
+	ptr = (char *)malloc((10));
+	if (!ptr)
+		return (NULL);
+	else
+	{
+		dex = 0;
+		while (s1[dex] != '\0')
+		{
+			ptr[dex] = s1[dex];
+			dex++;
+		}
+		ptr[dex] = '\0';
+	}
+	return (ptr);
+}
 
 static int	is_in(char Get_Data)
 {
@@ -18,14 +39,14 @@ static int	is_in(char Get_Data)
 	char	*is_in;
 
 	count = 0;
-	*is_in = "scdiu%pxX";
+	is_in = ft_strdup("scdiu%pxX");
 	while (is_in[count] != '\0')
 	{
 		if (is_in[count] == Get_Data)
-			return (-1);
+			return (free(is_in), -1);
 		count++;
 	}
-	return (1);
+	return (free(is_in), 1);
 }
 
 void	ft_check(char Get_Data, va_list ptr, int *p_return)
