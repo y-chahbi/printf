@@ -6,14 +6,14 @@
 /*   By: ychahbi <ychahbi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 14:30:17 by ychahbi           #+#    #+#             */
-/*   Updated: 2022/11/14 17:50:45 by ychahbi          ###   ########.fr       */
+/*   Updated: 2022/11/17 18:32:18 by ychahbi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-void    ft_printchar(char c, int *p_return)
+void	ft_printchar(char c, int *p_return)
 {
-    write(1,&c,1);
-    (*p_return)++;
+	write(1, &c, 1);
+	(*p_return)++;
 }
